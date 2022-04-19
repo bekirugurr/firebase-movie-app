@@ -4,11 +4,17 @@ import {
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
   updateProfile,
 } from "firebase/auth";
+import {
+  toastErrorNotify,
+  toastSuccessNotify,
+  toastWarnNotify,
+} from "../helpers/ToastNotify";
 
 //! TEMEL AYARLAR
 
@@ -50,20 +56,25 @@ export const createUser = async (email, password, displayName, navigate) => {
       email,
       password
     );
+    //? aşagıdaki display name i güncellemek için 
     await updateProfile(auth.currentUser, {
       displayName: displayName,
     });
+    toastSuccessNotify("Registered successfully!");
+    navigate("/");
     console.log(
       "Welcome! You have been registered. Here your infos -->",
       userCredential
     );
-    navigate("/");
   } catch (error) {
-    alert(error.message);
+    toastErrorNotify(error.message);
+    console.log(error.message)
   }
 };
 
 //! LOGIN FUNC U
+
+//? mevcut kullanıcının giriş yapması için kullanılan firebase metodu
 
 //* => email/şifre ile kayıt olmasını sağlamak için firebase in sitesinde Build>Authentication>Sign-in method ta email/password u enable yapıyoruz
 
@@ -78,24 +89,32 @@ export const signIn = async (email, password, navigate) => {
       "Welcome! You have been logged in. Here your infos -->",
       userCredential
     );
+    toastSuccessNotify("Logged in successfully!");
     navigate("/");
-  } catch (error) {}
+  } catch (error) {
+    toastErrorNotify(error.message);
+    console.log(error.message)
+  }
 };
 
 //! LOGOUT FUNC U
 
 export const logOut = () => {
   signOut(auth);
+  toastSuccessNotify("Logged out successfully!");
   console.log("Goodbye! You have been logged out...");
 };
 
 //! USER OBVSERVER ATAMA
+
+//? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu
+
 //* Bu func u context i oluşturan compenent in içine gönderiyoruz ki setCurrenUser i buna parametre olarak atayalım ve gelen kullanıcıyı currentUser a atayalım
 
 export const userObserver = (setCurrentUser) => {
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      setCurrentUser(user);
+  onAuthStateChanged(auth, (currentUser) => {
+    if (currentUser) {
+      setCurrentUser(currentUser);
     } else {
       //user is sign out
       setCurrentUser(false);
@@ -108,13 +127,34 @@ export const userObserver = (setCurrentUser) => {
 //* => google ile kayıt olmasını sağlamak için firebase in sitesinde Build>Authentication>Sign-in method ta google ı enable yapıyoruz
 
 export const signUpProvider = (navigate) => {
+  //* Google ile giriş yapılması için kullanılan firebase metodu
   const provider = new GoogleAuthProvider();
+  //* Açılır pencere ile giriş yapılması için kullanılan firebase metodu
   signInWithPopup(auth, provider)
     .then((result) => {
       console.log(result);
-      navigate('/')
+      toastSuccessNotify("Logged in successfully!");
+      navigate("/");
     })
     .catch((error) => {
+      toastErrorNotify(error.message);
       console.log(error);
+    });
+};
+
+//! EMAIL YOLUYSA ŞİFRE SIFIRLAMA 
+
+export const forgotPassword = (email) => {
+  //? Email yoluyla şifre sıfırlama için kullanılan firebase metodu
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      // Password reset email sent!
+      toastWarnNotify("Please check your mail box!");
+      alert("Please check your mail box!");
+    })
+    .catch((err) => {
+      toastErrorNotify(err.message);
+      // alert(err.message);
+      // ..
     });
 };

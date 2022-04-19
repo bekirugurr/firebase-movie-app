@@ -6,15 +6,16 @@ export const AuthContext = createContext();
 
 //* Aşağıdaki component bir provider
 
-const AuthContextProvider = (props) => {
+const AuthContextProvider = ({children}) => {
   const [currentUser, setCurrentUser] = useState();
+  
   useEffect(() => {
-    userObserver(setCurrentUser)
-  }, [])
+    userObserver(setCurrentUser);
+  }, []);
   
   return (
     <AuthContext.Provider value={{ currentUser }}>
-      {props.children}
+      {children}
     </AuthContext.Provider>
   );
 };
