@@ -19,7 +19,8 @@ import {
 //! TEMEL AYARLAR
 
 // TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
+//* See: https://firebase.google.com/docs/web/learn-more#config-object
+//* https://firebase.google.com/docs/auth/web/start
 
 //* Normalde alttakinin açık olması lazım. Ama burada gizliliği sağlamak için .env den aldık
 

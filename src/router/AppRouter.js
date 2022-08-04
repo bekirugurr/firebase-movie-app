@@ -13,11 +13,13 @@ import MovieDetail from "../pages/MovieDetail";
 import Navbar from "../components/Navbar";
 import { AuthContext } from "../context/AuthContext";
 import { useContext } from "react";
+import { toastWarnNotify } from '../helpers/ToastNotify'
 
 
 const AppRouter = () => {
   const { currentUser } = useContext(AuthContext);
   console.log(currentUser);
+  console.log(currentUser?.displayName);
   function PrivateRouter() {
     let location = useLocation();
     if (!currentUser) {
@@ -37,14 +39,21 @@ const AppRouter = () => {
         <Route path="/" element={<Main />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-         <Route element={<PrivateRouter />}>
-          <Route path="/details/:id" element={<MovieDetail />} />
-        </Route>
         {/* <Route path="/details/:id" element={<MovieDetail />} /> */}
+
+        //! 1. private routing yöntemi. bunda yukarıda bir PrivateRouter() tanımlamamız lazım. Ama bunda tek Private Router ın için istediğimiz sayıda route koyabiliriz. O yüzden best practice bunu kullanmak 
+       <Route element={<PrivateRouter />}>
+          <Route path="/details/:id" element={<MovieDetail />} />
+          {/* <Route path="/users/:id" element={<UserDetail />} />*/}
+          {/* <Route path="/example/" element={<Exampla />} />*/}
+
+        </Route> 
+
+        //! 2. private routing yöntemi. Tek tek her sayfa için ayrı ayarlama yapmak lazım olduğu için private router a ihtiyaç olan çoklu sayfalarda üstteki daha iyi 
          {/* <Route
           path="/details/:id"
           element={currentUser ? <MovieDetail /> : <Navigate to="/login"  replace/>}
-        />  */}
+        /> */}
       </Routes>
     </Router>
   );

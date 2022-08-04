@@ -30,7 +30,7 @@ const MovieDetail = () => {
     <div className="container py-5">
       <h1 className="text-center">{movieDetails?.title}</h1>
       {videoKey && <VideoSection videoKey={videoKey} />}
-      <div className="card mb-3">
+      <div className="card w-75 p-1 mx-auto mb-3">
         <div className="row g-0">
           <div className="col-md-4">
             <img

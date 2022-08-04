@@ -6,7 +6,7 @@ const VideoSection = ({ videoKey }) => {
       <div className="card-body">
         <div className="ratio ratio-16x9">
           <iframe
-            src={`https://www.youtube.com/embed/${videoKey}?autoplay=1&mute=1`}
+            src={`https://www.youtube.com/embed/${videoKey}?autoplay=0&mute=1`}
             title="YouTube video"
             allowFullScreen
           ></iframe>
