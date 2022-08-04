@@ -23,7 +23,7 @@ In this project:
 * CRUD operations were made by using <img src="https://user-images.githubusercontent.com/94041207/182919629-cb95a2ee-7628-4899-bb7b-275e1dbd3a85.png"  alt="axios" height="30">
 * Form validations were made by using <img src="https://user-images.githubusercontent.com/94041207/182910527-3818a588-68a6-41c4-919f-75325d63112f.jpg"  alt="formik_yup" height="30">
 * Notifications were made by using react <img src="https://user-images.githubusercontent.com/94041207/182910558-4b78b2e3-7a72-4c98-98a8-b42e421c0c8a.png"  alt="react_toastify" height="30">
-* Frontend part was deployed to <img src="https://user-images.githubusercontent.com/94041207/182938058-da1ca9a4-08db-43e9-8910-08e82c5d71db.png"  alt="netlify" height="30">
+* Project was deployed to <img src="https://user-images.githubusercontent.com/94041207/182938058-da1ca9a4-08db-43e9-8910-08e82c5d71db.png"  alt="netlify" height="30">
 * **React Router Dom** was used for changing gage. Also **private router** was used to prevent anonymous user to enter some pages.
 * **Responsiveness** for different screen size was done. 
 
