@@ -5,14 +5,14 @@
 ## <a href="https://bugur-firebase-movie-search-app.netlify.app/" target="_blank"> Go to project 🚀 </a>
 ## Preview of the project:
 ![movie_app_gif (1)](https://user-images.githubusercontent.com/94041207/182935716-f05366c3-f925-497b-a248-3fc190cfefd1.gif)
+
 ## Description 
-<p>In this project, it is aimed to create blog posts and display them on the dashboard. There are six cards on the dashboard. When the <b>View More</b> button is clicked, six more cards are loaded thanks to <b>pegination</b> (if there is six more cards). </p>
-<p>Anonymous user could enter dashboard page and see post cards. He/She could not enter detail page thanks to <b>private routing</b>. Only authenticated user can enter detail page. So to enter detail page anonymous user must log in or register.  </p>
-<p>Post card and detail page include post title, post picture, post category, post content, number of likes, number of views, number of comments, writer name, writed profile picture and how long ago was post created. In detail page, there is also like/dislike button, comment form and comments. Every comment div includes not only comment content but also who made the comment and how long ago was comment created.  </p>
-<p>The number of views is unique for each authenticated user. In other words, <b>when a authenticated user re-opens the detail page, the number of views will not increase.</b> </p>
-<p><b>Authenticated user can add , delete and update blog posts.</b> While post creation if authenticated user select ‘Publish’ on the combo box the post will be shown in de dashboard, if he/she select ‘Draft’ the post won’t be shown. <b>He/She also can update his/her profile informations.</b></p>
-<p>If the user has not uploaded the post picture, a default post picture will be seen as post picture. The same is true for the profile picture.   </p>
-<p>After registration, log in, log out, post adding, deleting, update, profile update or comment adding  processes a notify div will appear for a while thanks to <b>react toastify.</b> This div tell whether the process is done successfully or not. If process is succesfull this div will be green, if not it will be red.</p>
+<p>In this project, it is aimed to display film details, posters and fragmants by using the tmdb api.  </p>
+<p>Anonymous user could enter dashboard page and see movie cards. He/She could not enter detail page thanks to private routing. Only authenticated user can enter detail page. So to enter detail page anonymous user must log in or register.  </p>
+<p>There is a search feature according to the entered word. This feature gives movies whose name contains the entered word. But only authenticated user can use this search feature.  </p>
+<p>If a movie’s imdb point is greater than or equal to 8, this point is shown with green background color, if it is between 6 and 8 its imdb point is shown with orange background color, if it is under 6  its imdb point is shown with red background color. But imdb point is shown only to authenticated user.  </p>
+<p>When mouse cursor goes to a movie card an overview div will emerge that gives a brief info about movie. </p>
+<p>Detail page includes movie fragman, poster, release date, imbd point and how many people vote the movie.  </p>
 
 ## What is in the project? 
 In this project:   
