@@ -1,8 +1,17 @@
 ## Firebase Movie App
-<p><a href="#"><img src="https://logos-download.com/wp-content/uploads/2016/09/React_logo_wordmark-700x235.png"  alt="react" height="30"> </a>  <a href="#"> <img src="https://user-images.githubusercontent.com/94041207/182938610-4596ffdd-eaa9-42c0-8a5b-277582ab7750.png"  alt="firebase" height="30"> </a>  <img src="https://user-images.githubusercontent.com/94041207/182937776-0d83e2b1-0e2c-49e3-ae86-cd47d8ba6046.jpeg"  alt="bootstrap" height="30"> </a>  <a href="#"> <img src="https://user-images.githubusercontent.com/94041207/182937904-c3e112b6-5ad6-4df4-bbd9-35375a928d8a.png"  alt="context api" height="30"></a>  <a href="#"> <img src="https://user-images.githubusercontent.com/94041207/182919629-cb95a2ee-7628-4899-bb7b-275e1dbd3a85.png"  alt="axios" height="30"> </a>  <a href="#"><img src="https://user-images.githubusercontent.com/94041207/182910527-3818a588-68a6-41c4-919f-75325d63112f.jpg"  alt="formik_yup" height="30"> </a>  <a href="#"> <img src="https://user-images.githubusercontent.com/94041207/182910558-4b78b2e3-7a72-4c98-98a8-b42e421c0c8a.png"  alt="react_toastify" height="30"> </a> <a href="#"> <img src="https://user-images.githubusercontent.com/94041207/182938058-da1ca9a4-08db-43e9-8910-08e82c5d71db.png"  alt="netlify" height="30"></a></p>
+<p>
+<a href="https://reactjs.org/" rel="nofollow"><img src="https://user-images.githubusercontent.com/94041207/199491176-6fbe9d1f-d04c-4a6c-bdaf-ec4a6a397dfc.png" height="30" alt="React" data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" style="max-width: 100%;"></a>  
+<a href="https://firebase.google.com/" rel="nofollow"><img src="https://user-images.githubusercontent.com/94041207/199493030-f3227f28-6384-49ec-91e4-d07ccb8b8c93.png" height="30" alt="Firebase" data-canonical-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" style="max-width: 100%;"></a>
+<a href="https://getbootstrap.com/" rel="nofollow"><img src="https://user-images.githubusercontent.com/94041207/199491380-4f68009b-dcdc-4b4f-b099-8a158749cc86.png" height="30" alt="Bootstrap" data-canonical-src="https://cdn.icon-icons.com/icons2/2415/PNG/512/bootstrap_plain_wordmark_logo_icon_146620.png" style="max-width: 100%;"></a>
+<a href="#"> <img src="https://user-images.githubusercontent.com/94041207/182937904-c3e112b6-5ad6-4df4-bbd9-35375a928d8a.png"  alt="context api" height="30"></a>
+<a href="#"> <img src="https://user-images.githubusercontent.com/94041207/182919629-cb95a2ee-7628-4899-bb7b-275e1dbd3a85.png"  alt="axios" height="30"> </a>  
+<a href="#"><img src="https://user-images.githubusercontent.com/94041207/182910527-3818a588-68a6-41c4-919f-75325d63112f.jpg"  alt="formik_yup" height="30"> </a>  
+<a href="#"> <img src="https://user-images.githubusercontent.com/94041207/182910558-4b78b2e3-7a72-4c98-98a8-b42e421c0c8a.png"  alt="react_toastify" height="30"> </a> 
+<a href="https://www.netlify.com/" rel="nofollow"><img src="https://user-images.githubusercontent.com/94041207/199493660-4ad9b73f-d274-4261-ba7c-f0330e3fe99b.png"  height="30" alt="Netlify" style="max-width: 100%;"></a>
+</p>
 
-
-## <a href="https://bugur-firebase-movie-search-app.netlify.app/" target="_blank"> Go to project 🚀 </a>
+## Demo
+<a href="https://bugur-firebase-movie-search-app.netlify.app/" target="_blank"> Live link 🚀 </a>
 ## Preview of the project:
 ![movie_app_gif (1)](https://user-images.githubusercontent.com/94041207/182935716-f05366c3-f925-497b-a248-3fc190cfefd1.gif)
 
